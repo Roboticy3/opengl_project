@@ -10,9 +10,10 @@
 /* all arguments are named, and not positional */
 bool should_fullscreen = false;
 
-char* window_name = (char*)"Hello World";
+const char default_window_name[] = "Hello World";
+char* window_name = (char*)default_window_name;
 
-const char* options = "fw:";
+const char* options = "hfw:";
 
 int handle_args(int argc, char**argv) {
 
@@ -29,10 +30,12 @@ int handle_args(int argc, char**argv) {
             case '?':
             case 'h':
                 std::ifstream readme;
-                readme.open("../README");
-                std::string s;
-                std::getline(readme, s);
-                std::cout << s;
+                readme.open("../README.md");
+                
+                std::cout << readme.rdbuf();
+
+                readme.close();
+                return -1;
         }
 
         break;
