@@ -9,7 +9,7 @@ Building creates a build folder containing the opengl_project executable
 
 Run options:
     After building, run ./app from the root directory, which itself is just a link to the executable created by building.
-    ./app -f -w \<window-name\>
+    ./app -f -w <window-name>
     
     -f : make the window fullscreen
-    -w \<window-name\> : name the window
+    -w <window-name> : name the window
