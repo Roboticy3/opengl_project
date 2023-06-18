@@ -10,7 +10,7 @@
 /* all arguments are named, and not positional */
 bool should_fullscreen = false;
 
-char* window_name = "Hello World";
+char* window_name = (char*)"Hello World";
 
 const char* options = "fw:";
 
