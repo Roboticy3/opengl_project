@@ -6,6 +6,8 @@
 #include "glad.h"
 #include <GLFW/glfw3.h>
 
+#include "inputs.h"
+
 /* arguments given to the program are meant to set these properties, processed by process_args() */
 /* all arguments are named, and not positional */
 bool should_fullscreen = false;
@@ -76,6 +78,10 @@ int main(int argc, char **argv) {
         std::cout << "Couldn't load opengl\n";
         return -1;
     }
+
+    /* Give the window to the input handler */
+
+    init_inputs(window);
 
     glfwSwapInterval(0);
 
