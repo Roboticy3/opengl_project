@@ -1,5 +1,3 @@
-#ifndef INPUTS_H
-#define INPUTS_H
 
 #include <iostream>
 
@@ -7,4 +5,3 @@
 
 void init_inputs(GLFWwindow* window);
 
-#endif
