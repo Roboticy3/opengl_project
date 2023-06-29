@@ -28,6 +28,10 @@ enum INPUT_BUTTONS {
 /* Keep track of which buttons are currently pressed */
 bool button_mask[INPUTS_NUM] = {0};
 
+bool* get_mask() {
+    return button_mask;
+}
+
 /* Mapping that allows for keys from GLFW to be assigned to inputs
     Multiple keys can be mapped to the same input, but each key can only represent one input*/
 const std::unordered_map<int, INPUT_BUTTONS> button_map {
@@ -65,7 +69,5 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
 void init_inputs(GLFWwindow* window) {
     
     glfwSetKeyCallback(window, key_callback);
-
-
 
 }
